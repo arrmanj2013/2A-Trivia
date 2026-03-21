@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Trivia Generator</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero-card">
+        <p class="eyebrow">Learn with instant feedback</p>
+        <h1>AI Trivia Generator</h1>
+        <p class="hero-copy">
+          Pick a topic, generate a fresh trivia question, and see the correct answer immediately.
+        </p>
+
+        <div class="control-panel">
+          <label class="field-label" for="topic-select">Choose a topic</label>
+          <div class="controls-row">
+            <select id="topic-select" aria-label="Select a trivia topic"></select>
+            <button id="generate-btn" class="primary-btn">Generate Trivia</button>
+          </div>
+          <p id="status-text" class="status-text" aria-live="polite"></p>
+        </div>
+      </section>
+
+      <section class="trivia-card" aria-live="polite">
+        <div id="question-wrap" class="question-wrap hidden">
+          <p class="topic-pill" id="topic-pill"></p>
+          <h2 id="question-text"></h2>
+          <div id="answers" class="answers-grid"></div>
+          <div id="feedback" class="feedback hidden"></div>
+          <button id="next-btn" class="secondary-btn hidden">Next Question</button>
+        </div>
+
+        <div id="empty-state" class="empty-state">
+          <div class="sparkle">🧠</div>
+          <h2>Your trivia challenge will appear here</h2>
+          <p>Generate a question to start playing.</p>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
